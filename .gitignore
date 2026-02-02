@@ -6,11 +6,8 @@ dist/
 
 # Environment files (keep .env.example if you have one)
 .env
-.env.local
-.env.development
-.env.production
-.env.development
-.env.production
+.env.*
+!.env.example
 
 # IDE
 .vscode/
@@ -26,3 +23,4 @@ npm-debug.log*
 
 # Vercel
 .vercel/
+.vercel

@@ -7,7 +7,6 @@ export function useGoogleMaps() {
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
     libraries,
-    preventGoogleFontsLoading: true,
     id: 'google-map-script',
   })
 

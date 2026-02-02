@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Wrench, Calendar, Phone, Wind, Flame, Droplet, ThermometerSnowflake, PlayCircle } from 'lucide-react';
 import { useSettings } from '../hooks/useSettings';
-import { useGoogleMaps } from '../hooks/useMap';
 import { DEMO_MODE } from '../demo/demoMode';
 import Loading from '../components/common/Loading';
 import ServiceRequestForm from '../components/public/ServiceRequestForm';
@@ -11,7 +10,6 @@ import SuccessModal from '../components/common/SuccessModal';
 const LandingPage = () => {
   const navigate = useNavigate();
   const { settings, loading } = useSettings();
-  const { isLoaded: mapsLoaded, loadError: mapsError } = useGoogleMaps();
   const [showRequestForm, setShowRequestForm] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
